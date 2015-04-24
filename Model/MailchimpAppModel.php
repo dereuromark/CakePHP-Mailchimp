@@ -62,7 +62,7 @@ class MailchimpAppModel extends AppModel {
 			}
 			throw new MailchimpException($errorMsg, $errorCode, $errorName);
 		}
-		return false;
+		return $this->response;
 	}
 
 	/**
