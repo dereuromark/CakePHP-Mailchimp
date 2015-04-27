@@ -13,16 +13,16 @@ class MailchimpAppModel extends AppModel {
 	 *
 	 * @var array
 	 */
-	public $response = array();
+	public $response = [];
 
 	public $Mailchimp;
 
-	protected $_defaults = array(
+	protected $_defaults = [
 		'exceptions' => false,
 		'apiKey' => '',
 		'defaultListId' => '',
 		'defaultCampaignId' => '',
-	);
+	];
 
 	public function __construct($id = false, $table = null, $ds = null) {
 		parent::__construct($id, $table, $ds);
@@ -37,8 +37,8 @@ class MailchimpAppModel extends AppModel {
 	 *
 	 * @return mixed
 	 */
-	public function call($method, array $options = array()) {
-		$args = array();
+	public function call($method, array $options = []) {
+		$args = [];
 		foreach ($options as $key => $value) {
 			$args[Inflector::underscore($key)] = $value;
 		}
