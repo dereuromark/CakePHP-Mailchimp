@@ -95,14 +95,14 @@ $response = $MailchimpSubscriber->subscribe($data, $options);
 
 ## Debugging
 
-Unfortunately, the 2.0 vendor class from Mailchimp does not through exceptions by itself. So if your methods return false and you need to know
+Unfortunately, the 2.0 vendor class from Mailchimp does not throw exceptions by itself. So if your methods return false and you need to know
 the error message/code you will have to use the following:
 ```php
 debug($this->MailchimpSubscriber->response);
 ```
 with `$this->MailchimpSubscriber` being your model.
 
-You can, however, make the plugin throw exceptions using
+You can, however, make the plugin throw exceptions using:
 ```php
 	Configure::write('Mailchimp.exceptions', true);
 ```
